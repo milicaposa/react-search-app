@@ -1,0 +1,122 @@
+/* search */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.search-container {
+    margin-top: 20px;
+}
+
+.search-input {
+    position: relative;
+}
+.search-input .search-icon {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    font-size: 20px;
+    color: #aaaaaa;
+}
+.search-input:focus-within .search-icon {
+    color: #777;
+    transition: all .3s ease-in-out;
+}
+
+#search-input {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 10px 14px 50px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.4); 
+    box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.4);
+}
+#search-input:focus {
+    outline: none;
+}
+
+
+/* results */
+.results-container {
+    background-color:#d0cef0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    color: #333;
+    padding: 15px 25px;
+    transition: all .3s ease-in-out;
+}
+.result-item a {
+    color: #333;
+    text-decoration: none;
+}
+.result-item h3 {
+    font-weight: 400;
+}
+.result-item p, span {
+    font-size: 14px;
+    color: #757394;
+}
+
+.result-item:hover {
+    background-color: #c3c0e7;
+}
+.result-item:first-child:hover {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.result-item:last-child:hover {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* results status */
+.results-status p {
+    font-weight: 700;
+    font-size: 18px;
+}
+.results-status i {
+    margin-right: 10px;
+}
+
+.results-status:hover {
+    background-color: #d0cef0;
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+/* responsive */
+@media only screen and (max-width: 479px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    #search-input {
+        padding: 12px 10px 12px 45px;
+        font-size: 12px;
+    }
+    .search-input .search-icon {
+        font-size: 18px;
+        top: 4px;
+    }
+
+    .result-item {
+        padding: 8px 18px;
+    }
+    .result-item h3, .results-status p {
+        font-size: 16px;
+    }
+    .result-item span {
+        font-size: 12px;
+    }
+}
